@@ -1,0 +1,19 @@
+---
+- name: Install needed python deps
+  apt:
+    name: ['python3-pip', 'python3-setuptools']
+    update_cache: yes
+
+- name: Remove old docker-py python lib
+  pip:
+    name: docker-py
+    state: absent
+
+- name: Install docker python libs for kubernetes and docker
+  pip:
+    name: 
+    - docker
+    - pyyaml
+    - jsondiff
+    - kubernetes
+    - openshift
