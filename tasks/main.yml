@@ -17,3 +17,4 @@
     - jsondiff
     - kubernetes
     - openshift
+    - docker-compose
